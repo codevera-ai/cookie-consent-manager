@@ -18,22 +18,18 @@ A lightweight, customisable vanilla JavaScript library for managing cookie conse
 
 ### Via npm
 
-> Note: Package publication to npm is pending. For now, use the manual installation method below.
-
 ```bash
-npm install js-cookie-consent
+npm install @codevera-ai/cookie-consent
 ```
 
 ### Via CDN
 
-> Note: CDN availability is pending npm publication. For now, use the manual installation method below.
-
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/js-cookie-consent/src/cookie-consent.css">
-<script src="https://cdn.jsdelivr.net/npm/js-cookie-consent/src/cookie-consent.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/cookie-consent/src/cookie-consent.css">
+<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/cookie-consent/src/cookie-consent.js"></script>
 ```
 
-### Manual installation (recommended for now)
+### Manual installation
 
 Download or clone the repository and include the files in your HTML:
 
