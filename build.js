@@ -21,7 +21,7 @@ if (!fs.existsSync(distDir)) {
 // Minify JavaScript
 console.log('→ Minifying JavaScript...');
 try {
-    execSync('npx terser src/cookie-consent.js -c -m --comments false -o dist/cookie-consent.min.js', { stdio: 'inherit' });
+    execSync('npx terser src/ccmanager.js -c -m --comments false -o dist/ccmanager.min.js', { stdio: 'inherit' });
     console.log('✓ JavaScript minified');
 } catch (error) {
     console.error('✗ Failed to minify JavaScript');
@@ -31,7 +31,7 @@ try {
 // Minify CSS
 console.log('→ Minifying CSS...');
 try {
-    execSync('npx cleancss -o dist/cookie-consent.min.css src/cookie-consent.css', { stdio: 'inherit' });
+    execSync('npx cleancss -o dist/ccmanager.min.css src/ccmanager.css', { stdio: 'inherit' });
     console.log('✓ CSS minified');
 } catch (error) {
     console.error('✗ Failed to minify CSS');
@@ -40,13 +40,13 @@ try {
 
 // Copy unminified files to dist
 console.log('→ Copying source files...');
-fs.copyFileSync('src/cookie-consent.js', 'dist/cookie-consent.js');
-fs.copyFileSync('src/cookie-consent.css', 'dist/cookie-consent.css');
+fs.copyFileSync('src/ccmanager.js', 'dist/ccmanager.js');
+fs.copyFileSync('src/ccmanager.css', 'dist/ccmanager.css');
 console.log('✓ Source files copied');
 
 // Get file sizes
-const jsMinSize = fs.statSync('dist/cookie-consent.min.js').size;
-const cssMinSize = fs.statSync('dist/cookie-consent.min.css').size;
+const jsMinSize = fs.statSync('dist/ccmanager.min.js').size;
+const cssMinSize = fs.statSync('dist/ccmanager.min.css').size;
 const totalSize = jsMinSize + cssMinSize;
 
 console.log('\n=== Build complete ===');

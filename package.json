@@ -2,8 +2,8 @@
   "name": "@codevera-ai/js-cookie-consent",
   "version": "1.0.1",
   "description": "A lightweight, customisable vanilla JavaScript library for managing cookie consent",
-  "main": "src/cookie-consent.js",
-  "style": "src/cookie-consent.css",
+  "main": "src/ccmanager.js",
+  "style": "src/ccmanager.css",
   "files": [
     "src/",
     "dist/",

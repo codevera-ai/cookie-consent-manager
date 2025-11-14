@@ -45,14 +45,14 @@ npm install @codevera-ai/js-cookie-consent
 
 **Minified (recommended for production):**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent@1.0.0/dist/cookie-consent.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent@1.0.0/dist/cookie-consent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent@1.0.0/dist/ccmanager.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent@1.0.0/dist/ccmanager.min.js"></script>
 ```
 
 **Unminified (for development):**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/cookie-consent.css">
-<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/cookie-consent.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/ccmanager.css">
+<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/ccmanager.js"></script>
 ```
 
 ### Manual installation
@@ -60,8 +60,8 @@ npm install @codevera-ai/js-cookie-consent
 Download or clone the repository and include the files in your HTML:
 
 ```html
-<link rel="stylesheet" href="path/to/cookie-consent.css">
-<script src="path/to/cookie-consent.js"></script>
+<link rel="stylesheet" href="path/to/ccmanager.css">
+<script src="path/to/ccmanager.js"></script>
 ```
 
 ## Quick start
