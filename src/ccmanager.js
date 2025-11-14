@@ -74,9 +74,27 @@
                 this.container.style[key] = positionStyles[key];
             });
 
-            if (this.width !== 'auto') {
+            // For full width with edge positions, use inset instead of width
+            const centerPositions = ['top-center', 'bottom-center', 'center'];
+            const isEdgePosition = !centerPositions.includes(this.position);
+
+            if (this.width === 'full' && isEdgePosition) {
+                // Use inset positioning for full-width edge positions
+                if (this.position.includes('top')) {
+                    this.container.style.left = '0';
+                    this.container.style.right = '0';
+                    this.container.style.width = 'auto';
+                } else if (this.position.includes('bottom')) {
+                    this.container.style.left = '0';
+                    this.container.style.right = '0';
+                    this.container.style.width = 'auto';
+                }
+            } else if (this.width !== 'auto') {
+                // Apply width for center positions or non-full widths
                 this.container.style.width = widths[this.width] || widths['full'];
-                this.container.style.maxWidth = widths[this.width] || widths['full'];
+                if (this.width !== 'full') {
+                    this.container.style.maxWidth = widths[this.width];
+                }
             }
 
             this.container.setAttribute('data-animation', this.animation);
