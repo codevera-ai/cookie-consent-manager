@@ -454,7 +454,45 @@
 
                         const valueCell = document.createElement('td');
                         valueCell.className = 'cookie-consent-inline-value';
-                        valueCell.textContent = cookie.value;
+
+                        // Try to parse JSON and format it nicely
+                        try {
+                            const parsed = JSON.parse(decodeURIComponent(cookie.value));
+
+                            if (typeof parsed === 'object' && parsed !== null) {
+                                const list = document.createElement('ul');
+                                list.className = 'cookie-consent-value-list';
+
+                                Object.entries(parsed).forEach(([key, value]) => {
+                                    const item = document.createElement('li');
+                                    const keySpan = document.createElement('span');
+                                    keySpan.className = 'cookie-consent-value-key';
+                                    keySpan.textContent = key + ': ';
+
+                                    const valueSpan = document.createElement('span');
+                                    valueSpan.className = 'cookie-consent-value-text';
+
+                                    if (Array.isArray(value)) {
+                                        valueSpan.textContent = value.join(', ');
+                                    } else if (typeof value === 'object' && value !== null) {
+                                        valueSpan.textContent = JSON.stringify(value);
+                                    } else {
+                                        valueSpan.textContent = String(value);
+                                    }
+
+                                    item.appendChild(keySpan);
+                                    item.appendChild(valueSpan);
+                                    list.appendChild(item);
+                                });
+
+                                valueCell.appendChild(list);
+                            } else {
+                                valueCell.textContent = cookie.value;
+                            }
+                        } catch (e) {
+                            // Not JSON, just display the raw value
+                            valueCell.textContent = cookie.value;
+                        }
 
                         row.appendChild(nameCell);
                         row.appendChild(valueCell);

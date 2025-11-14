@@ -177,3 +177,26 @@
     word-break: break-all;
     font-size: 0.8125rem;
 }
+
+.cookie-consent-value-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.cookie-consent-value-list li {
+    padding: 0.25rem 0;
+    line-height: 1.5;
+}
+
+.cookie-consent-value-key {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.8125rem;
+}
+
+.cookie-consent-value-text {
+    color: #6b7280;
+    font-size: 0.8125rem;
+}
