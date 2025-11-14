@@ -28,7 +28,7 @@ You build your banner exactly how you want it to look. We handle everything else
 - Multiple animation styles (slide, fade, scale)
 - Support for cookie categories (necessary, analytics, marketing, etc.)
 - No dependencies
-- Lightweight (10.3KB minified, ~4KB gzipped)
+- Lightweight (11.9KB minified, ~4.5KB gzipped)
 - Event-driven architecture
 - Responsive and mobile-friendly
 - Built with GDPR and CCPA compliance in mind
@@ -194,6 +194,22 @@ View all cookies currently set on the site. Shows a default modal with all cooki
 ```html
 <button class="js-cookie-view-cookies">View cookies</button>
 ```
+
+#### `js-cookies-inline`
+
+Display cookies inline on the page. Place this class on any container element and it will automatically populate with all cookies on page load.
+
+```html
+<div class="js-cookies-inline"></div>
+```
+
+The library includes default styling for the inline display, but you can override it with your own CSS by targeting these classes:
+- `.cookie-consent-inline` - Container
+- `.cookie-consent-inline-list` - List element
+- `.cookie-consent-inline-item` - Each cookie item
+- `.cookie-consent-inline-name` - Cookie name
+- `.cookie-consent-inline-value` - Cookie value
+- `.cookie-consent-inline-empty` - Empty state message
 
 ### Category checkboxes
 

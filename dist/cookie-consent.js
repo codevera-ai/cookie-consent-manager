@@ -19,6 +19,7 @@
             showSettingsClass: 'js-cookie-show-settings',
             viewCookiesClass: 'js-cookie-view-cookies',
             categoryCheckboxClass: 'js-cookie-category',
+            inlineCookiesClass: 'js-cookies-inline',
         },
 
         /**
@@ -40,6 +41,7 @@
             this.applyPositioning();
             this.bindEvents();
             this.checkConsent();
+            this.renderInlineCookies();
         },
 
         /**
@@ -389,6 +391,64 @@
 
             // Add to page
             document.body.appendChild(overlay);
+        },
+
+        /**
+         * Render cookies inline in elements with js-cookies-inline class
+         */
+        renderInlineCookies: function() {
+            const inlineContainers = document.querySelectorAll(`.${this.config.inlineCookiesClass}`);
+
+            if (inlineContainers.length === 0) {
+                return;
+            }
+
+            const allCookies = document.cookie.split(';').reduce((acc, cookie) => {
+                const [name, value] = cookie.trim().split('=');
+                if (name) {
+                    acc.push({ name, value: value || '' });
+                }
+                return acc;
+            }, []);
+
+            inlineContainers.forEach((container) => {
+                // Clear existing content
+                container.innerHTML = '';
+
+                // Add default class for styling
+                if (!container.classList.contains('cookie-consent-inline')) {
+                    container.classList.add('cookie-consent-inline');
+                }
+
+                if (allCookies.length === 0) {
+                    const emptyMessage = document.createElement('p');
+                    emptyMessage.className = 'cookie-consent-inline-empty';
+                    emptyMessage.textContent = 'No cookies found';
+                    container.appendChild(emptyMessage);
+                } else {
+                    const list = document.createElement('ul');
+                    list.className = 'cookie-consent-inline-list';
+
+                    allCookies.forEach((cookie) => {
+                        const item = document.createElement('li');
+                        item.className = 'cookie-consent-inline-item';
+
+                        const name = document.createElement('span');
+                        name.className = 'cookie-consent-inline-name';
+                        name.textContent = cookie.name;
+
+                        const value = document.createElement('span');
+                        value.className = 'cookie-consent-inline-value';
+                        value.textContent = cookie.value;
+
+                        item.appendChild(name);
+                        item.appendChild(value);
+                        list.appendChild(item);
+                    });
+
+                    container.appendChild(list);
+                }
+            });
         },
 
         /**
