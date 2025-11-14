@@ -1,0 +1,46 @@
+{
+  "name": "js-cookie-consent",
+  "version": "1.0.0",
+  "description": "A lightweight, customisable vanilla JavaScript library for managing cookie consent",
+  "main": "src/cookie-consent.js",
+  "style": "src/cookie-consent.css",
+  "files": [
+    "src/",
+    "dist/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billymedia/js-cookie-consent.git"
+  },
+  "keywords": [
+    "cookie",
+    "consent",
+    "gdpr",
+    "ccpa",
+    "privacy",
+    "cookies",
+    "vanilla-js",
+    "javascript",
+    "banner",
+    "cookie-banner",
+    "cookie-consent",
+    "cookie-notice"
+  ],
+  "author": "Billy Patel <billy@billymedia.co.uk> (https://billymedia.co.uk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/billymedia/js-cookie-consent/issues"
+  },
+  "homepage": "https://github.com/billymedia/js-cookie-consent#readme",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.44.1"
+  }
+}

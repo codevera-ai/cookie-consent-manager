@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent - Skeleton with Categories</title>
+    <link rel="stylesheet" href="../../src/cookie-consent.css">
+</head>
+<body>
+
+    <!-- Cookie Consent Banner with Category Selection -->
+    <div data-cookie-consent data-position="center" data-animation="scale" data-width="half">
+
+        <div>
+            <button class="js-cookie-close">Close</button>
+        </div>
+
+        <div>
+            <h2>Cookie preferences</h2>
+            <p>Choose which cookies you want to accept.</p>
+        </div>
+
+        <div>
+            <div>
+                <input type="checkbox" id="necessary" class="js-cookie-category" value="necessary" checked disabled>
+                <label for="necessary">
+                    <strong>Necessary cookies</strong>
+                    <span>Required for the site to function properly.</span>
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="analytics" class="js-cookie-category" value="analytics">
+                <label for="analytics">
+                    <strong>Analytics cookies</strong>
+                    <span>Help us understand how visitors use our site.</span>
+                </label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="marketing" class="js-cookie-category" value="marketing">
+                <label for="marketing">
+                    <strong>Marketing cookies</strong>
+                    <span>Used to deliver personalised advertisements.</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button class="js-cookie-accept">Save preferences</button>
+            <button class="js-cookie-reject">Reject optional</button>
+            <button class="js-cookie-view-cookies">View cookies</button>
+        </div>
+
+    </div>
+
+    <script src="../../src/cookie-consent.js"></script>
+
+</body>
+</html>

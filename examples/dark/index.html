@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent - Dark Mode Style</title>
+    <link rel="stylesheet" href="../../src/cookie-consent.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main style="padding: 2rem;">
+        <h1>Dark mode style example</h1>
+        <p>This demonstrates a sleek dark mode style for cookie consent.</p>
+        <button class="js-cookie-show-settings">Manage cookies</button>
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent-dark" data-cookie-consent data-position="bottom-center" data-animation="slide" data-width="full">
+
+        <div class="cookie-container">
+            <div class="cookie-grid">
+                <div class="cookie-text">
+                    <h2>Your privacy matters</h2>
+                    <p>We use cookies to provide you with the best possible experience. Our cookies are used for analytics and to improve our services.</p>
+                </div>
+
+                <div class="cookie-buttons">
+                    <button class="btn-accept js-cookie-accept">Accept all cookies</button>
+                    <button class="btn-decline js-cookie-reject">Decline optional cookies</button>
+                    <button class="btn-decline js-cookie-view-cookies">View cookies</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../src/cookie-consent.js"></script>
+
+</body>
+</html>

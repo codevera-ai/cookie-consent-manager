@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Consent - Friendly Style</title>
+    <link rel="stylesheet" href="../../src/cookie-consent.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main style="padding: 2rem;">
+        <h1>Friendly style example</h1>
+        <p>This demonstrates a warm, approachable, playful style for cookie consent.</p>
+        <button class="js-cookie-show-settings">Cookie settings</button>
+    </main>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent-friendly" data-cookie-consent data-position="bottom-right" data-animation="slide" data-width="auto">
+
+        <div class="cookie-box">
+            <div class="cookie-header">
+                <span class="cookie-emoji">🍪</span>
+                <h2>Cookie time</h2>
+            </div>
+
+            <div class="cookie-content">
+                <p>We use cookies to make your experience better. They help us understand what you like and keep things running smoothly.</p>
+            </div>
+
+            <div class="cookie-actions">
+                <button class="btn-primary js-cookie-accept">Sounds good</button>
+                <button class="btn-link js-cookie-reject">No thanks</button>
+                <button class="btn-link js-cookie-view-cookies">View cookies</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../src/cookie-consent.js"></script>
+
+</body>
+</html>

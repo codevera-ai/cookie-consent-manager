@@ -1,0 +1,101 @@
+/**
+ * Friendly Style - Cookie Consent
+ * Warm, approachable, playful design
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+}
+
+.cookie-consent-friendly {
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+.cookie-box {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: 3px solid #fbbf24;
+}
+
+.cookie-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.cookie-emoji {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cookie-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.cookie-content p {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.9375rem;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.cookie-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.cookie-actions button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1a202c;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+}
+
+.btn-link {
+    background: transparent;
+    color: #718096;
+    text-decoration: underline;
+}
+
+.btn-link:hover {
+    color: #2d3748;
+}
+
+@media (max-width: 768px) {
+    .cookie-consent-friendly {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .cookie-box {
+        padding: 1.5rem;
+    }
+}

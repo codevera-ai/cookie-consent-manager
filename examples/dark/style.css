@@ -1,0 +1,106 @@
+/**
+ * Dark Mode Style - Cookie Consent
+ * Sleek, modern dark theme
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #e5e7eb;
+    background: #0f172a;
+}
+
+main {
+    color: #e5e7eb;
+}
+
+.cookie-consent-dark {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-top: 1px solid #334155;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cookie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cookie-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+}
+
+.cookie-text h2 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    letter-spacing: -0.025em;
+}
+
+.cookie-text p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.cookie-buttons button {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-accept {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: #ffffff;
+}
+
+.btn-accept:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-decline {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+.btn-decline:hover {
+    background: #475569;
+}
+
+@media (max-width: 768px) {
+    .cookie-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cookie-buttons button {
+        width: 100%;
+    }
+}
