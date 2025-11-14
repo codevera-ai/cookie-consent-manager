@@ -1,5 +1,5 @@
 {
-  "name": "@codevera-ai/cookie-consent",
+  "name": "@codevera-ai/js-cookie-consent",
   "version": "1.0.0",
   "description": "A lightweight, customisable vanilla JavaScript library for managing cookie consent",
   "main": "src/cookie-consent.js",

@@ -19,14 +19,14 @@ A lightweight, customisable vanilla JavaScript library for managing cookie conse
 ### Via npm
 
 ```bash
-npm install @codevera-ai/cookie-consent
+npm install @codevera-ai/js-cookie-consent
 ```
 
 ### Via CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/cookie-consent/src/cookie-consent.css">
-<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/cookie-consent/src/cookie-consent.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/cookie-consent.css">
+<script src="https://cdn.jsdelivr.net/npm/@codevera-ai/js-cookie-consent/src/cookie-consent.js"></script>
 ```
 
 ### Manual installation
